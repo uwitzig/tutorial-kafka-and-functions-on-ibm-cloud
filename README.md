@@ -14,10 +14,10 @@ In this hands-on tutorial you will create an IBM Event Streams Service on the IB
 3. After you submit your registration, you will receive an e-mail from the IBM Cloud team with details about your account. In this e-mail, you will need to click the link provided to confirm your registration.
 4. Now you should be able to login to your new IBM Cloud account ;-) 
 
-## Configuring the Watson Assistant on the IBM Cloud
+## Create and configure Event Streams on the IBM Cloud
 
-<h4>1) Create a Watson Assistant Service</h4>
-After the login you will see your IBM Cloud Dashboard. In the upper menu bar click Catalog. In the Catalog section, click on the AI category, then select Watson Assistant. On the next page select the Lite Plan - or the Plus Trial - these should cover all deployment options and you can also choose a region, where you would like to deploy your service as well as a service name. Click "Create".
+<h4>1) Create a Event Streams Service</h4>
+After the login you will see your IBM Cloud Dashboard. In the upper right click on blue area "Create Resource". In the Catalog section, write Event Streams click on the AI category, then select Watson Assistant. On the next page select the Lite Plan - or the Plus Trial - these should cover all deployment options and you can also choose a region, where you would like to deploy your service as well as a service name. Click "Create".
 
 ![Catalog Watson Assistant](readme_images/catalog-watson-assistant.png)
 
