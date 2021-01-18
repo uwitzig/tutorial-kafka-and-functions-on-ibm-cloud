@@ -19,7 +19,7 @@ In this hands-on tutorial you will create an IBM Event Streams Service on the IB
 <h4>1) Create a Event Streams Service</h4>
 After the login you will see your IBM Cloud Dashboard. In the upper right click on blue area "Create Resource". Type "Event Streams" in the search field of the catalog, then click on Event Streams. On the next page select the Lite - or the Standard plan and you can also choose a region, where you would like to deploy your service as well as a service name. Click "Create".
 
-![Catalog Watson Assistant](readme_images/catalog-watson-assistant.png)
+![Catalog_Event_Streams](readme_images/catalog-event-streams.png)
 
 <br>
 <h4>2) Access your Watson Assistant Service</h4>
