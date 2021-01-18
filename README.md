@@ -1,13 +1,8 @@
-# tutorial-kafka-and-functions-on-ibm-cloud
-
-Overview
-
-
-
 <h1 align="center" style="border-bottom: none;">:rocket: IBM Cloud Tutorial: Kafka and functions</h1>
-<h3 align="center">In this hands-on tutorial you will create an IBM Event Streams Service on the IBM Cloud amd run the sample application to produce events on the topic "kafka-python-console-sample-topic". Using IBM functions you create a trigger that invokes the write function every time an event arrives in the topic "kafka-python-console-sample-topic". </h3>
 
-## Overview
+In this hands-on tutorial you will create an IBM Event Streams Service on the IBM Cloud and run the sample application to produce events on the topic "kafka-python-console-sample-topic". Using IBM functions you create a trigger that invokes the write function every time an event arrives in the topic "kafka-python-console-sample-topic".
+
+## Tutorial Overview
 
 ![Overview](./Kafka-Functions-Tutorial.png)
 
