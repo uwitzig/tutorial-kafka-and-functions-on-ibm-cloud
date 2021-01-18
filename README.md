@@ -4,7 +4,7 @@ In this hands-on tutorial you will create an IBM Event Streams Service on the IB
 
 ## Tutorial Overview
 
-![Overview](./Kafka-Functions-Tutorial.png)
+![Overview](readme-images/Kafka-Functions-Tutorial.png)
 
 
 ## Prerequisites
