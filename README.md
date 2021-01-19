@@ -21,8 +21,7 @@ After the login you will see your IBM Cloud Dashboard. In the upper right click 
 Type "Event Streams" in the search field of the catalog, then click on Event Streams. 
 On the Event Streams page select the Standard plan, choose a region where you would like to deploy your service as well as a service name. 
 Then click "Create".
-
-
+<br>
 ![Catalog_Event_Streams]( readme-images/test3.png)
 
 <br>
