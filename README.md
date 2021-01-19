@@ -68,38 +68,17 @@ An application can only access the service via its service credentials. Therefor
 
 
 
-# Get and configure sample application to produce messages
-{: #getting_started}
+## Get and configure sample application to produce messages
 
-Event Streams is a high-throughput message bus built with Apache Kafka. To get started with Event Streams
-and start sending and receiving messages, you can use the sample application. The sample shows how a producer sends
-messages to a consumer using a topic. 
+IBM Event Streams Service is a high-throughput message bus built with Apache Kafka. To get started with Event Streams
+and start sending and receiving messages, you can use the sample application. 
 
-To access other {{site.data.keyword.messagehub}} samples, including samples for Node.js and Python, see [{{site.data.keyword.messagehub}} samples ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/event-streams-samples){:new_window}.
 
-<!-- 11/01/18 - Karen - removing diagram as requested by James
-![Java sample overview diagram](getting_started_sample.gif "Overview diagram of Java sample showing the flow of messages.")
--->
-<!-- 08/08/2019 - Chloe - Re-structuring to get UI components of the flow introduced earlier in the flow. Also moving pre-requsisites to a potentially collapsible section. -->
+<h4>1) Prerequisites </h4>
 
-## Prerequisites
-{: #getting_started_prereqs}
-
-1. **If you don't already have one, create an {{site.data.keyword.messagehub}} service instance.**
-
-   a. Log in to the {{site.data.keyword.Bluemix_notm}} console.
-  
-   b. Click the [**{{site.data.keyword.messagehub}} service** ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog/event-streams){:new_window} in the **Catalog**.
-  
-   c. Select the **Lite plan** on the service instance page.
-  
-   d. Enter a name for your service. You can use the default value.
-  
-   e. Click **Create**. The {{site.data.keyword.messagehub}} **Getting started** page opens. 
-
-2. **If you don't already have them, install the following prerequisites:**
+**If you don't already have them, install the following prerequisites:**
 	
-	* [git ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git-scm.com/){:new_window}
+	* [git ![External link icon]( icons/launch-glyph.svg "External link icon")](https://git-scm.com/){:new_window}
 	* [Gradle ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://gradle.org/){:new_window}
 	* Java 8 or higher
 
