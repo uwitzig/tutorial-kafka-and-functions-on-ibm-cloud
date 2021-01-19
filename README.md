@@ -152,6 +152,10 @@ __Note__: The service credentials have been removed after this tutorial. Therefo
 
 Please note you current namespace which is displayed after "Current namespace:"
 
+2. Install the [IBM Cloud Command Line](https://cloud.ibm.com/functions/cli) 
+
+Be sure to execute all 5 steps.
+
 
 
 
