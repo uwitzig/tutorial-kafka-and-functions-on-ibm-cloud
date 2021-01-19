@@ -14,7 +14,7 @@ In this hands-on tutorial you will create an IBM Event Streams Service on the IB
 3. After you submit your registration, you will receive an e-mail from the IBM Cloud team with details about your account. In this e-mail, you will need to click the link provided to confirm your registration.
 4. Now you should be able to login to your new IBM Cloud account ;-) 
 
-## Create Event Streams Service on the IBM Cloud
+## Create and configure Event Streams Service on the IBM Cloud
 
 <h4>1) Create a Event Streams Service</h4>
 After the login you will see your IBM Cloud Dashboard. In the upper right click on blue area "Create Resource". 
@@ -32,7 +32,7 @@ Go back to your IBM Cloud Dashboard by clicking the IBM Cloud Logo on the upper 
 
 ![Manage Event Streams]( readme-images/manage-event-streams.png)
 
-## Create a topic for your sample application
+<h4>3) Create a topic for your sample application</h4>
 
 The next step is to create a topic where your sample application can write to. On the manage page of your Event Streams service click on "Topics", then click on "Create topic +"
 <br>
@@ -41,10 +41,21 @@ Type "kafka-python-console-sample-topic" as this is the topic used by the sample
 
 ![Create_Topic]( readme-images/create-topic-2.png)
 
-On the next pages leave the values to the default and click on "Next" and finally on "Create topic". As a result you newly created topic will be displayed.
+On the next pages leave the values to its default and click on "Next" and finally on "Create topic". As a result your newly created topic will be displayed.
 <br>
 
 ![Topic Result]( readme-images/topic-result.png)
+
+<h4>4) Add service credentials</h4>
+
+An application can only access the service via its service credentials. Therefore we need to add service credentials as follows:
+<ul>
+  <li>Click on "Service credentials" on the left side on the Event Streams page.</li>
+  <li>Then click on "New credential +" on the upper right side.</li>
+  <li>Leave the service name to its default value and the role to "Manager" and click on "Add"</li>
+</ul>
+
+![Add_credentials]( readme-images/add-credentials.png)
 
 
 
