@@ -79,7 +79,7 @@ Install [git](https://git-scm.com/) if you don't already have it.
 <br>
 Install [Python](https://www.python.org/downloads/) 3.6 or later
 
-##### To run the application on macOS 
+##### To run the application locally on macOS 
 * Open Keychain Access, export all certificates in System Roots to a single .pem file
 
 
@@ -100,26 +100,16 @@ Install [Python](https://www.python.org/downloads/) 3.6 or later
    ```
 
    <br/>
-   
-   # IBM Event Streams for IBM Cloud Kafka Python console sample application: Local Development guide
-As pushing the application into IBM Cloud® does not require you to build the application locally, this guide is here to guide you through the process, should you wish to build the application locally.
-As pushing the application into IBM Cloud® does not require you to build the application locally, this guide is here to guide you through the process, should you wish to build the application locally.
 
-We will not discuss establishing a connection from your laptop to Event Streams for IBM Cloud. This is described in the [ connection guide](https://cloud.ibm.com/docs/services/EventStreams?topic=eventstreams-connecting#connecting).
-
-## Prerequisites
-* [Python](https://www.python.org/downloads/) 3.6 or later
-
-##### macOS 
-* Open Keychain Access, export all certificates in System Roots to a single .pem file
-
-## Installing dependencies
+## 3. Installing dependencies
 Run the following commands on your local machine, after the prerequisites for your environment have been completed:
+
 ```shell
 pip install -r requirements.txt
 ```
 
 ## Running the Sample
+
 Once built, to run the sample, execute the following command:
 ```shell
 python3 app.py <kafka_brokers_sasl> <kafka_admin_url> <api_key> <ca_location>
