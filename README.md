@@ -87,12 +87,11 @@ Install [git](https://git-scm.com/) if you don't already have it.
    ```
 
    <br/>
-   When the repository is cloned, from the command line change into the <strong>kafka-java-console-sample</strong> directory.
+   When the repository is cloned, from the command line change into the <code>kafka-python-console-sample</code> directory.
 
    ```
-   cd event-streams-samples/kafka-java-console-sample
+   cd event-streams-samples/kafka-python-console-sample/
    ```
-   {: codeblock}
 
    <br/>
    Build the contents of the <code>kafka-java-console-sample</code> directory.
