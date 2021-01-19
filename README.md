@@ -73,55 +73,12 @@ An application can only access the service via its service credentials. Therefor
 IBM Event Streams Service is a high-throughput message bus built with Apache Kafka. To get started with Event Streams
 and start sending and receiving messages, you can use the sample application. 
 
+1. ** Get prerequisite git**
 
-<h4>1) Prerequisites: Install Git </h4>
+Install [git](https://git-scm.com/) if you don't already have it.
 
-Install [git](https://git-scm.com/){:new_window} if you don't already have it.
 
-	
-	[git ![( icons/launch-glyph.svg]](https://git-scm.com/){:new_window}
-	* [Gradle ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://gradle.org/){:new_window}
-	* Java 8 or higher
-
-## Tutorial steps
-{: #getting_started_steps}
-
-1. {: #Create_topic_step notoc} **Create a topic **
-
-   The topic is the core of {{site.data.keyword.messagehub}} flows. Data passes through a topic from producing applications to consuming applications. 
-
-   We'll be using the {{site.data.keyword.Bluemix_notm}} console (UI) to create the topic, and will reference it when starting the application.
-
-      a. Go to the **Topics** tab.
-  
-      b. Click **New topic**.
-  
-      c. Name your topic.
-  
-     The sample application is configured to connect to topic `kafka-java-console-sample-topic`. If the topic does not exist, it is created when the application is started. 
-     {: important}
-
-      d. Keep the defaults set in the rest of the topic creation, click **Next** and then **Create topic**.
-
-      e. The topic appears in the table. You have created a topic!
-  
-2. {: #create_credentials_step notoc} **Create credentials**
-
-    To allow the sample application to access your topic, we need to create some credentials for it. 
-
-     a. Go to **Service credentials** in the navigation pane.
-  
-     b. Click **New credential**.
-  
-     c. Give the credential a name so you can identify its purpose later. You can accept the default value.
-  
-     d. Give the credential the **Manager** role so that it can access the topics, and create them if necessary. 
-  
-     e. Click **Add**. The new credential is listed in the table in **Service credentials**.
-  
-     f. Click **View credentials** to see the `api_key` and `kafka_brokers_sasl` values.
-
-3. {: #clone_repository_step notoc} **Clone the Github repository for the sample application**
+2. **Clone the Github repository for the sample application**
 
    The sample application is stored in Github. Clone the `event-streams-samples` repository by running the clone command from the command line. 
 
