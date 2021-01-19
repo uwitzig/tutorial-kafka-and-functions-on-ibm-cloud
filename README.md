@@ -36,8 +36,20 @@ Go back to your IBM Cloud Dashboard by clicking the IBM Cloud Logo on the upper 
 
 The next step is to create a topic where your sample application can write to. On the manage page of your Event Streams service click on "Topics", then click on "Create topic +"
 <br>
+Type "kafka-python-console-sample-topic" as this is the topic used by the sample event streams application and click on "Next".
+<br>
 
 ![Create_Topic]( readme-images/create-topic-2.png)
+
+On the next pages leave the values to the default and click on "Next" and finally on "Create topic". As a result you newly created topic will be displayed.
+<br>
+
+![Topic Result]( readme-images/topic-result.png)
+
+
+
+
+
 
 
 
