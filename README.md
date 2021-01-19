@@ -65,7 +65,7 @@ An application can only access the service via its service credentials. Therefor
 
 ![View_credentials]( readme-images/view-credentials.png)
 
-# Get and configure python sample application
+## Get and configure python sample application
 
 IBM Event Streams Service is a high-throughput message bus built with Apache Kafka. To get started with Event Streams
 and start sending and receiving messages, you can use the IBM Event Streams sample application.
@@ -140,4 +140,17 @@ Consumer app example console output on macOS:
 ![Consumer app example console output]( readme-images/kafka-python-consumer2.png)
 
 __Note__: The service credentials have been removed after this tutorial. Therefore the api_key in the example above is not anymore valid.
+
+
+## Get and configure IBM Cloud Function to comsume messages
+
+<h4>1)Go to Cloud Functions and check your current namespace</h4>
+
+1. Go to [IBM Cloud Functions](https://cloud.ibm.com/functions/) and check your current namespace
+
+![Cloud Functions]( readme-images/cloud-funcions.png)
+
+
+
+
 
