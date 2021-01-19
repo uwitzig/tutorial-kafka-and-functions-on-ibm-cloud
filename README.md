@@ -71,13 +71,16 @@ An application can only access the service via its service credentials. Therefor
 # Get and configure sample application to produce messages
 
 IBM Event Streams Service is a high-throughput message bus built with Apache Kafka. To get started with Event Streams
-and start sending and receiving messages, you can use the sample application. 
+and start sending and receiving messages, you can use the IBM Event Streams sample application.
 
 ## 1. Get prerequisites
 
 Install [git](https://git-scm.com/) if you don't already have it.
 <br>
 Install [Python](https://www.python.org/downloads/) 3.6 or later
+
+##### To run the application on macOS 
+* Open Keychain Access, export all certificates in System Roots to a single .pem file
 
 
 
