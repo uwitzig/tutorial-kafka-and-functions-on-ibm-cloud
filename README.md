@@ -37,7 +37,7 @@ Go back to your IBM Cloud Dashboard by clicking the IBM Cloud Logo on the upper 
 The next step is to create a topic where your sample application can write to. On the manage page of your Event Streams service click on "Topics", then click on "Create topic +"
 <br>
 
-![Create_Topic]( readme-images/create-topic.png)
+![Create_Topic]( readme-images/create-topic-2.png)
 
 
 
