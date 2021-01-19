@@ -130,7 +130,9 @@ __Note__: `<kafka_brokers_sasl>` must be a single string enclosed in quotes. For
 The sample will run indefinitely until interrupted. To stop the process, use `Ctrl+C`. 
 
 Procuder app example console output on macOS:
-![Producer app example console output]( readme-images/kafka-python-producer.png)
+![Producer app example console output]( readme-images/kafka-python-producer2.png)
+
+__Note__: The service credentials have been removed after this tutorial. Therefore the api_key in the example above is not anymore valid.
   
 ## 4. Running the sample app to consume messages
 
@@ -142,9 +144,9 @@ python3 app.py <kafka_brokers_sasl> <kafka_admin_url> <api_key> <ca_location> -c
 The sample will run indefinitely until interrupted. To stop the process, use `Ctrl+C`. 
 
 Consumer app example console output on macOS:
-![Consumer app example console output]( readme-images/kafka-python-consumer.png)
+![Consumer app example console output]( readme-images/kafka-python-consumer2.png)
 
-
+__Note__: The service credentials have been removed after this tutorial. Therefore the api_key in the example above is not anymore valid.
 
 
 
