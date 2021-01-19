@@ -80,7 +80,7 @@ Install [git](https://git-scm.com/) if you don't already have it.
 Install [Python](https://www.python.org/downloads/) 3.6 or later
 
 ##### To run the application locally on macOS 
-* Open Keychain Access, export all certificates in System Roots to a single .pem file
+* Open Keychain Access, export all certificates in System Roots to a single .pem file on your local machine
 
 
 
@@ -88,66 +88,61 @@ Install [Python](https://www.python.org/downloads/) 3.6 or later
 
    The sample application is stored in Github. Clone the `event-streams-samples` repository by running the clone command from the command line. 
 
-   ```
+   ```shell
    git clone https://github.com/ibm-messaging/event-streams-samples.git
    ```
 
    <br/>
    When the repository is cloned, from the command line change into the <code>kafka-python-console-sample</code> directory.
 
-   ```
+   ```shell
    cd event-streams-samples/kafka-python-console-sample/
    ```
 
    <br/>
 
 ## 3. Installing dependencies
-Run the following commands on your local machine, after the prerequisites for your environment have been completed:
+Run the following command on your local machine to install the dependencies:
 
 ```shell
 pip install -r requirements.txt
 ```
 
-## Running the Sample
+## 3. Running the sample app to produce messages
 
-Once built, to run the sample, execute the following command:
+To run the producer sample, execute the following command:
+
 ```shell
-python3 app.py <kafka_brokers_sasl> <kafka_admin_url> <api_key> <ca_location>
+python3 app.py <kafka_brokers_sasl> <kafka_admin_url> <api_key> <ca_location> -producer
 ```
-
-To find the values for `<kafka_brokers_sasl>`, `<kafka_admin_url>` and `<api_key>`, access your Event Streams instance in IBM Cloud®, go to the `Service Credentials` tab and select the `Credentials` you want to use.  If your user value is `token`, specify that with the password seperated by a `:`.
+   
+ To find the values for `<kafka_brokers_sasl>`, `<kafka_admin_url>` and `<api_key>`, access your Event Streams instance in IBM Cloud®, go to the `Service Credentials` tab and select the `Credentials` you want to use.
 
 `<ca_location>` is the path where the trusted SSL certificates are stored on your machine and is therefore system dependent. 
+
 For example:
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   Build the contents of the <code>kafka-java-console-sample</code> directory.
+* Ubuntu: /etc/ssl/certs
+* RedHat: /etc/pki/tls/cert.pem
+* macOS: The .pem file you created in the prerequisite section
 
+__Note__: `<kafka_brokers_sasl>` must be a single string enclosed in quotes. For example: `"host1:port1,host2:port2"`. We recommend using all the Kafka hosts listed in the `Credentials` you selected.
 
+The sample will run indefinitely until interrupted. To stop the process, use `Ctrl+C`. 
 
+Procuder app example console output on macOS:
+![Producer app example console output]( readme-images/kafka-python-producer.png)
+  
+## 4. Running the sample app to consume messages
 
+To run the consumer sample open a second command line window and execute the following command:
 
+```shell
+python3 app.py <kafka_brokers_sasl> <kafka_admin_url> <api_key> <ca_location> -consumer
+```
+The sample will run indefinitely until interrupted. To stop the process, use `Ctrl+C`. 
+
+Consumer app example console output on macOS:
+![Consumer app example console output]( readme-images/kafka-python-consumer.png)
 
 
 
