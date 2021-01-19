@@ -20,15 +20,17 @@ In this hands-on tutorial you will create an IBM Event Streams Service on the IB
 After the login you will see your IBM Cloud Dashboard. In the upper right click on blue area "Create Resource". 
 Type "Event Streams" in the search field of the catalog, then click on Event Streams. 
 On the Event Streams page select the Standard plan, choose a region where you would like to deploy your service as well as a service name. 
-Then click "Create". <br>
+Then click "Create".
+<br>
 
 ![Catalog_Event_Streams]( readme-images/catalog-services-event-streams.png)
 
 <br>
-<h4>2) Access your Watson Assistant Service</h4>
-Go back to your IBM Cloud Dashboard by clicking the IBM Cloud Logo on the upper left. Under services you will find the Watson Assistant Service in the corresponding region. Access your service by launching it. Afterwards click on Skills in the menu on the left and create a new Dialog skill. You have to set the language of your assistant or chatbot.
+<h4>2) Access your Event Streams Service</h4>
+Go back to your IBM Cloud Dashboard by clicking the IBM Cloud Logo on the upper left. Under services you will find the Event Streams Service in the corresponding region. Access your service by clicking on its name.
+<br>
 
-![Create a new Skill]( ./readme-images/test.png)
+![Create a new Skill]( ./readme-images/manage-event-streams.png)
 
 ## Create Intents, Entities and the Dialog
 
