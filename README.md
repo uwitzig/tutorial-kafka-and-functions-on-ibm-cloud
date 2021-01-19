@@ -148,7 +148,9 @@ __Note__: The service credentials have been removed after this tutorial. Therefo
 
 1. Go to [IBM Cloud Functions](https://cloud.ibm.com/functions/) and check your current namespace
 
-![Cloud Functions]( readme-images/cloud-funcions.png)
+![Cloud_Functions]( readme-images/cloud-functions.png)
+
+Please note you current namespace which is displayed after "Current namespace:"
 
 
 
