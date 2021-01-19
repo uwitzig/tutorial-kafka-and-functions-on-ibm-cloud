@@ -65,15 +65,12 @@ An application can only access the service via its service credentials. Therefor
 
 ![View_credentials]( readme-images/view-credentials.png)
 
-
-
-
-# Get and configure sample application to produce messages
+# Get and configure python sample application
 
 IBM Event Streams Service is a high-throughput message bus built with Apache Kafka. To get started with Event Streams
 and start sending and receiving messages, you can use the IBM Event Streams sample application.
 
-## 1. Get prerequisites
+<h4>1) Get prerequisites</h4>
 
 Install [git](https://git-scm.com/) if you don't already have it.
 <br>
@@ -84,7 +81,7 @@ Install [Python](https://www.python.org/downloads/) 3.6 or later
 
 
 
-## 2. Clone the Github repository for the sample application
+<h4>2) Clone the Github repository for the sample application</h4>
 
    The sample application is stored in Github. Clone the `event-streams-samples` repository by running the clone command from the command line. 
 
@@ -101,14 +98,14 @@ Install [Python](https://www.python.org/downloads/) 3.6 or later
 
    <br/>
 
-## 3. Installing dependencies
+<h4>3) Installing dependencies</h4>
 Run the following command on your local machine to install the dependencies:
 
 ```shell
 pip install -r requirements.txt
 ```
 
-## 3. Running the sample app to produce messages
+<h4>4) Running the sample app to produce messages</h4>
 
 To run the producer sample, execute the following command:
 
@@ -134,7 +131,7 @@ Procuder app example console output on macOS:
 
 __Note__: The service credentials have been removed after this tutorial. Therefore the api_key in the example above is not anymore valid.
   
-## 4. Running the sample app to consume messages
+<h4>5) Running the sample app to consume messages</h4>
 
 To run the consumer sample open a second command line window and execute the following command:
 
