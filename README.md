@@ -74,11 +74,12 @@ IBM Event Streams Service is a high-throughput message bus built with Apache Kaf
 and start sending and receiving messages, you can use the sample application. 
 
 
-<h4>1) Prerequisites </h4>
+<h4>1) Prerequisites: Install Git </h4>
 
-**If you don't already have them, install the following prerequisites:**
+Install [git](https://git-scm.com/){:new_window} if you don't already have it.
+
 	
-	* [git ![External link icon]( icons/launch-glyph.svg "External link icon")](https://git-scm.com/){:new_window}
+	[git ![( icons/launch-glyph.svg]](https://git-scm.com/){:new_window}
 	* [Gradle ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://gradle.org/){:new_window}
 	* Java 8 or higher
 
