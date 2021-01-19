@@ -68,27 +68,26 @@ An application can only access the service via its service credentials. Therefor
 
 
 
-## Get and configure sample application to produce messages
+# Get and configure sample application to produce messages
 
 IBM Event Streams Service is a high-throughput message bus built with Apache Kafka. To get started with Event Streams
 and start sending and receiving messages, you can use the sample application. 
 
-1. ** Get prerequisite git**
+## 1. Get prerequisite git
 
 Install [git](https://git-scm.com/) if you don't already have it.
 
 
-2. **Clone the Github repository for the sample application**
+## 2. Clone the Github repository for the sample application
 
    The sample application is stored in Github. Clone the `event-streams-samples` repository by running the clone command from the command line. 
 
    ```
     git clone https://github.com/ibm-messaging/event-streams-samples.git
    ```
-   {: codeblock}
 
    <br/>
-   When the repository is cloned, from the command line change into the <code>kafka-java-console-sample</code> directory.
+   When the repository is cloned, from the command line change into the <strong>kafka-java-console-sample</strong> directory.
 
    ```
    cd event-streams-samples/kafka-java-console-sample
