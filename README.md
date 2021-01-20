@@ -70,7 +70,7 @@ An application can only access the service via its service credentials. Therefor
 IBM Event Streams Service is a high-throughput message bus built with Apache Kafka. To get started with Event Streams
 and start sending and receiving messages, you can use the IBM Event Streams sample application.
 
-<h4>1) Get prerequisites</h4>
+<h4>5) Get prerequisites</h4>
 
 Install [git](https://git-scm.com/) if you don't already have it.
 <br>
@@ -79,7 +79,7 @@ Install [Python](https://www.python.org/downloads/) 3.6 or later
 ##### To run the application locally on macOS 
 * Open Keychain Access, export all certificates in System Roots to a single .pem file on your local machine
 
-<h4>2) Clone the Github repository for the sample application</h4>
+<h4>6) Clone the Github repository for the sample application</h4>
 
    The sample application is stored in Github. Clone the `event-streams-samples` repository by running the clone command from the command line. 
 
@@ -94,14 +94,14 @@ Install [Python](https://www.python.org/downloads/) 3.6 or later
    cd event-streams-samples/kafka-python-console-sample/
    ```
 
-<h4>3) Installing dependencies</h4>
+<h4>7) Installing dependencies</h4>
 Run the following command on your local machine to install the dependencies:
 
 ```shell
 pip install -r requirements.txt
 ```
 
-<h4>4) Running the sample app to produce messages</h4>
+<h4>8) Running the sample app to produce messages</h4>
 
 To run the producer sample, execute the following command:
 
@@ -127,7 +127,7 @@ Procuder app example console output on macOS:
 
 __Note__: The service credentials have been removed after this tutorial. Therefore the api_key in the example above is not anymore valid.
   
-<h4>5) Running the sample app to consume messages</h4>
+<h4>9) Running the sample app to consume messages</h4>
 
 To run the consumer sample open a second command line window and execute the following command:
 
@@ -144,15 +144,15 @@ __Note__: The service credentials have been removed after this tutorial. Therefo
 
 ## Get and configure IBM Cloud Function to comsume messages
 
-<h4>1)Go to Cloud Functions and check your current namespace</h4>
+<h4>10) Go to [IBM Cloud Functions](https://cloud.ibm.com/functions/) and check your current namespace</h4>
 
-1. Go to [IBM Cloud Functions](https://cloud.ibm.com/functions/) and check your current namespace
+![Cloud_Functions]( readme-images/cloud-functions2.png)
 
-![Cloud_Functions]( readme-images/cloud-functions.png)
+__Note__: The current namespace which is displayed after "Current namespace:"
 
-Please note you current namespace which is displayed after "Current namespace:"
+__Note__: You can create a separate namespace for this tutorial by creating a new [cloud foundry org and space]( https://cloud.ibm.com/account/cloud-foundry). Ensure that you create your separate namespace in the same region as you have created the Event Streams Service in task 1) above. 
 
-2. Install the [IBM Cloud Command Line](https://cloud.ibm.com/functions/cli) 
+<h4>11) Install the [IBM Cloud Command Line](https://cloud.ibm.com/functions/cli)</h4> 
 
 Be sure to execute all 5 steps.
 
