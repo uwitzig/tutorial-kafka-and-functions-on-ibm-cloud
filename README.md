@@ -144,7 +144,9 @@ __Note__: The service credentials have been removed after this tutorial. Therefo
 
 ## Get and configure IBM Cloud Function to comsume messages
 
-<h4>10) Go to [IBM Cloud Functions](https://cloud.ibm.com/functions/) and check your current namespace</h4>
+<h4>10) Go to IBM Cloud Functions and check your current namespace</h4>
+
+[IBM Cloud Functions](https://cloud.ibm.com/functions/)
 
 ![Cloud_Functions]( readme-images/cloud-functions2.png)
 
@@ -152,11 +154,18 @@ __Note__: The current namespace which is displayed after "Current namespace:"
 
 __Note__: You can create a separate namespace for this tutorial by creating a new [cloud foundry org and space]( https://cloud.ibm.com/account/cloud-foundry). Ensure that you create your separate namespace in the same region as you have created the Event Streams Service in task 1) above. 
 
-<h4>11) Install the [IBM Cloud Command Line](https://cloud.ibm.com/functions/cli)</h4> 
+<h4>11) Install the IBM Cloud Command Line with functions plugin</h4> 
 
-Be sure to execute all 5 steps.
+[IBM Cloud Command Line](https://cloud.ibm.com/functions/cli)
 
+![Cloud_Functions CLI]( readme-images/cloud-functions-cli.png)
 
+__Note__: Ensure that you target the same resource group as you have created the Event Stream Service in task 1) above. If you have left the value to its default then you would enter:
+
+```shell
+ibmcloud target -g default
+```
+![Cloud_Functions CLI Target]( readme-images/cloud-functions-cli-target.png)
 
 
 
