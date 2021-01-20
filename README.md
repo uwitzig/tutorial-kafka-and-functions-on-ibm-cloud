@@ -167,5 +167,18 @@ ibmcloud target -g default
 ```
 ![Cloud_Functions CLI Target]( readme-images/cloud-functions-cli-target.png)
 
+Test it
+
+```shell
+ibmcloud fn list
+```
+
+![Cloud_Functions CLI Test]( readme-images/cloud-functions-cli-test.png)
+
+
+
+
+
+
 
 
