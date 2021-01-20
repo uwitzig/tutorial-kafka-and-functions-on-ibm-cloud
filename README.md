@@ -176,9 +176,69 @@ ibmcloud fn list
 ![Cloud_Functions CLI Test]( readme-images/cloud-functions-cli-test.png)
 
 
+<h4>12) Deploying the Event Streams Events template from the CLI</h4> 
+
+IBM Cloud™ Functions offers a catalog of templates to help you get started on your next project. Templates are a combination of actions, triggers, sequences. Some templates also incorporate other services from IBM Cloud. By using these templates, you can understand how IBM Cloud™ Functions entities work together and even use these entities as a basis for your own project.
+
+More information about the [quickstart templates]( https://cloud.ibm.com/docs/openwhisk?topic=openwhisk-templates#messagehub-events-template)
+
+1. Clone the template repo.
+
+    ```
+    git clone https://github.com/ibm-functions/template-messagehub-trigger.git
+    ```
+
+2. Navigate to the directory for the action runtime that you want to use. For example, `python`.
+
+    ```
+    cd template-messagehub-trigger/runtimes/python
+    ```
+    
+
+3. Deploy the template by using the following environment variables.
+
+    ```
+    KAFKA_BROKERS=<hosts> KAFKA_TOPIC=<topic> KAFKA_ADMIN_URL=<admin_url> \ 
+    MESSAGEHUB_USER=<username> MESSAGEHUB_PASS=<password> \ 
+    PACKAGE_NAME=<name> RULE_NAME=<name> TRIGGER_NAME=<name> \
+    ibmcloud fn deploy -m manifest.yaml
+    ```
+    
+    <table>
+    <caption>Understanding the environment variables</caption>
+    <thead>
+    <th colspan=2>Understanding the environment variables</th>
+    </thead>
+    <tbody>
+    <tr><td><code>KAFKA_BROKERS</code></td><td>Your Event Streams REST endpoints. See Service Credentials in task 4)</td></tr>
+    <tr><td><code>KAFKA_TOPIC</code></td><td>The topic to subscribe to. In our tutorial "kafka-python-console-sample-topic"</td></tr>
+    <tr><td><code>KAFKA_ADMIN_URL</code></td><td>The Event Streams admin URL. See Service Credentials in task 4)</td></tr>  
+    <tr><td><code>MESSAGEHUB_USER</code></td><td>Your Event Streams username. See Service Credentials in task 4). In our case "token"</td></tr>
+    <tr><td><code>MESSAGEHUB_PASS</code></td><td>Your Event Streams password. See Service Credentials in task 4).</td></tr>
+    <tr><td><code>PACKAGE_NAME</code></td><td>A custom name for the package. In our tutorial "kafka-template-package-01"</td></tr>
+    <tr><td><code>RULE_NAME</code></td><td>A custom name for the rule. In our tutorial "tutorial-write-rule-01"</td></tr>
+    <tr><td><code>TRIGGER_NAME</code></td><td>A custom name for the trigger. In our tutorial "tutorial-write-trigger-01"</td></tr>
+    </tbody></table>
+
+Example deployment
+![Cloud_Functions deploy template]( readme-images/cloud-functions-deploy-template.png)   
+    
+
+After the template deploys, you can make further edits to the code to customize it as needed, or go back and check out the catalog of available templates.
+
+KAFKA_BROKERS="broker-4-z90rsv38qxg9nxvz.kafka.svc03.eu-de.eventstreams.cloud.ibm.com:9093,broker-0-z90rsv38qxg9nxvz.kafka.svc03.eu-de.eventstreams.cloud.ibm.com:9093,broker-5-z90rsv38qxg9nxvz.kafka.svc03.eu-de.eventstreams.cloud.ibm.com:9093,broker-1-z90rsv38qxg9nxvz.kafka.svc03.eu-de.eventstreams.cloud.ibm.com:9093,broker-3-z90rsv38qxg9nxvz.kafka.svc03.eu-de.eventstreams.cloud.ibm.com:9093,broker-2-z90rsv38qxg9nxvz.kafka.svc03.eu-de.eventstreams.cloud.ibm.com:9093" \
+KAFKA_ADMIN_URL="https://z90rsv38qxg9nxvz.svc03.eu-de.eventstreams.cloud.ibm.com" MESSAGEHUB_USER="token" MESSAGEHUB_PASS="zbVr-C0VnXsMJwehGHhAtzukgOHswv6o39JvUXdL25jv" \
+KAFKA_TOPIC="kafka-python-console-sample-topic" PACKAGE_NAME="kafka-template-package-01" \
+TRIGGER_NAME="aeler-write-trigger-01" RULE_NAME="aeler-write-rule-01" \
+ibmcloud fn deploy -m aeler_manifest.yaml 
+
+List the entities you have created in your namespaces
+
+   ```shell
+   ibmcloud fn list
+   ```
+   
+![Cloud_Functions list]( readme-images/cloud-functions-list.png)  
 
 
-
-
-
-
+After the template deploys, you can make further edits to the code to customize it as needed, or go back and check out the catalog of available templates.
