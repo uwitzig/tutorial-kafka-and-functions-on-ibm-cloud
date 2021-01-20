@@ -182,20 +182,20 @@ IBM Cloud™ Functions offers a catalog of templates to help you get started on 
 
 More information about the [quickstart templates]( https://cloud.ibm.com/docs/openwhisk?topic=openwhisk-templates#messagehub-events-template)
 
-1. Clone the template repo.
+Clone the template repo.
 
     ```
     git clone https://github.com/ibm-functions/template-messagehub-trigger.git
     ```
 
-2. Navigate to the directory for the action runtime that you want to use. For example, `python`.
+Navigate to the directory for the action runtime that you want to use. For example, `python`.
 
     ```
     cd template-messagehub-trigger/runtimes/python
     ```
     
 
-3. Deploy the template by using the following environment variables.
+Deploy the template by using the following environment variables.
 
     ```
     KAFKA_BROKERS=<hosts> KAFKA_TOPIC=<topic> KAFKA_ADMIN_URL=<admin_url> \ 
@@ -250,5 +250,13 @@ Poll the activation logs
    ```shell
    ibmcloud fn activation poll
    ```
+Open an additional command line window and run the standalone sample application to produce messages as outlined in task 8)
+
+
+
+```shell
+   cd event-streams-samples/kafka-python-console-sample/
+   ```
+
 
 After the template deploys, you can make further edits to the code to customize it as needed, or go back and check out the catalog of available templates.
