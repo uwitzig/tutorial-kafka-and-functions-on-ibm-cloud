@@ -270,8 +270,14 @@ We see that the process-message function produces an error as it is expecting an
 
 <h4>Task 15) Modify the process-message function</h4>
 
-Change to the directory where you have downloaded the template-messagehub-trigger in task 12)
+Change to the directory where you have downloaded the template-messagehub-trigger in task 12) 
 
+
+    ```shell
+    git clone https://github.com/ibm-functions/template-messagehub-trigger.git
+    ```
+    
+    
     ```
     cd template-messagehub-trigger/runtimes/python
     ```
