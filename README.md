@@ -262,6 +262,7 @@ Poll the activation logs to see whether the incoming message trigger the process
    ```shell
    ibmcloud fn activation poll
    ```
+   
 ![Cloud_Functions activation poll]( readme-images/cloud-functions-activation-poll.png) 
 
 We can see that the prossess-message function is activated each time a message arrives in the topic.
@@ -271,6 +272,46 @@ We see that the process-message function produces an error as it is expecting an
 <h4>Task 15) Modify the process-message function</h4>
 
 Change to the directory where you have downloaded the template-messagehub-trigger in task 12) 
+
+   ```shell
+   cd template-messagehub-trigger/runtimes/python
+   ```
+ Open the file actions/process-message.py file with an editor
+ 
+   ```shell
+   vi actions/process-message.py 
+   ```
+   
+Delete the existing content and replace it by the following one:
+
+   ```shell
+   def main(dict):
+    messages = dict.get('messages')
+
+    if messages is None or messages[0] is None:
+        return { 'error': "Invalid arguments. Must include 'messages' JSON array with 'value' field" }
+    try:
+        val = messages[0]['value']
+    except KeyError:
+        return { 'error': "Invalid arguments. Must include 'messages' JSON array with 'value' field" }
+
+    for msg in messages:
+        print(msg)
+        
+    return { 'msg': msg}
+   ```
+ 
+ Save the file
+ 
+ Deploy the modified template as you did in task 12)
+
+    ```shell
+    KAFKA_BROKERS=<hosts> KAFKA_TOPIC=<topic> KAFKA_ADMIN_URL=<admin_url> \ 
+    MESSAGEHUB_USER=<username> MESSAGEHUB_PASS=<password> \ 
+    PACKAGE_NAME=<name> RULE_NAME=<name> TRIGGER_NAME=<name> \
+    ibmcloud fn deploy -m manifest.yaml
+    ```
+![Cloud_Functions activation poll]( readme-images/cloud-functions-redeploy.png)
 
 
     ```shell
@@ -288,7 +329,7 @@ Open the file actions/process-message.py file with an editor
     vi actions/process-message.py 
     ```   
     
-Delete replace the existing content by the following one:
+Delete the existing content and replace it by the following one:
 
     ```
     def main(dict):
