@@ -197,14 +197,14 @@ Navigate to the directory for the action runtime that you want to use. For examp
 
 Deploy the template by using the following environment variables.
 
-    ```
+    ```shell
     KAFKA_BROKERS=<hosts> KAFKA_TOPIC=<topic> KAFKA_ADMIN_URL=<admin_url> \ 
     MESSAGEHUB_USER=<username> MESSAGEHUB_PASS=<password> \ 
     PACKAGE_NAME=<name> RULE_NAME=<name> TRIGGER_NAME=<name> \
     ibmcloud fn deploy -m manifest.yaml
     ```
     
-    <table>
+   <table>
     <caption>Understanding the environment variables</caption>
     <thead>
     <th colspan=2>Understanding the environment variables</th>
@@ -218,7 +218,8 @@ Deploy the template by using the following environment variables.
     <tr><td><code>PACKAGE_NAME</code></td><td>A custom name for the package. In our tutorial "kafka-template-package-01"</td></tr>
     <tr><td><code>RULE_NAME</code></td><td>A custom name for the rule. In our tutorial "tutorial-write-rule-01"</td></tr>
     <tr><td><code>TRIGGER_NAME</code></td><td>A custom name for the trigger. In our tutorial "tutorial-write-trigger-01"</td></tr>
-    </tbody></table>
+    </tbody>
+   </table>
 
 Example deployment
 ![Cloud_Functions deploy template]( readme-images/cloud-functions-deploy-template.png)   
