@@ -101,7 +101,7 @@ Run the following command on your local machine to install the dependencies:
 pip install -r requirements.txt
 ```
 
-<h4>8) Running the sample app to produce messages</h4>
+<h4>Task 8) Running the sample app to produce messages</h4>
 
 To run the producer sample, execute the following command:
 
@@ -127,7 +127,7 @@ Procuder app example console output on macOS:
 
 __Note__: The service credentials have been removed after this tutorial. Therefore the api_key in the example above is not anymore valid.
   
-<h4>9) Running the sample app to consume messages</h4>
+<h4>Task 9) Running the sample app to consume messages</h4>
 
 To run the consumer sample open a second command line window and execute the following command:
 
@@ -144,7 +144,7 @@ __Note__: The service credentials have been removed after this tutorial. Therefo
 
 ## Get and configure IBM Cloud Function to comsume messages
 
-<h4>10) Go to IBM Cloud Functions and check your current namespace</h4>
+<h4>Task 10) Go to IBM Cloud Functions and check your current namespace</h4>
 
 [IBM Cloud Functions](https://cloud.ibm.com/functions/)
 
@@ -176,7 +176,7 @@ ibmcloud fn list
 ![Cloud_Functions CLI Test]( readme-images/cloud-functions-cli-test.png)
 
 
-<h4>12) Deploying the Event Streams Events template from the CLI</h4> 
+<h4>Task 12) Deploying the Event Streams Events template from the CLI</h4> 
 
 IBM Cloud™ Functions offers a catalog of templates to help you get started on your next project. Templates are a combination of actions, triggers, sequences. Some templates also incorporate other services from IBM Cloud. By using these templates, you can understand how IBM Cloud™ Functions entities work together and even use these entities as a basis for your own project.
 
@@ -245,18 +245,25 @@ List the details of the rule you deployed
    ```
 ibmcloud fn rule  get tutorial-write-rule-01
 
-Poll the activation logs
+<h4>Task 13) Produce messages with the standalone sample application in a separate command line window</h4> 
+
+Open an additional command line window and run the standalone sample application to produce messages as outlined in task 8)
+
+Produce messages
+![Cloud_Functions produce]( readme-images/cloud-functions-produce.png) 
+
+
+<h4>Task 14) Poll the IBM functions activation logs</h4> 
+
+Switch back to the command line window you used in task 12) where you deployed the Event Streams template
+
+Poll the activation logs to see whether the incoming message trigger the process-message function
 
    ```shell
    ibmcloud fn activation poll
    ```
-Open an additional command line window and run the standalone sample application to produce messages as outlined in task 8)
-
-
-
-```shell
-   cd event-streams-samples/kafka-python-console-sample/
-   ```
+   
+![Cloud_Functions activation poll]( readme-images/cloud-functions-activation-poll.png) 
 
 
 After the template deploys, you can make further edits to the code to customize it as needed, or go back and check out the catalog of available templates.
