@@ -244,11 +244,10 @@ List the details of the rule you deployed
    ```shell
    ibmcloud fn rule get tutorial-write-rule-01
    ```
-ibmcloud fn rule  get tutorial-write-rule-01
 
 <h4>Task 13) Produce messages with the standalone sample application in a separate command line window</h4> 
 
-Open an additional command line window and run the standalone sample application to produce messages as outlined in task 8)
+Open an separate command line window and run the standalone sample application to produce messages as outlined in task 8)
 
 Produce messages
 ![Cloud_Functions produce]( readme-images/cloud-functions-produce.png) 
@@ -263,8 +262,45 @@ Poll the activation logs to see whether the incoming message trigger the process
    ```shell
    ibmcloud fn activation poll
    ```
-   
 ![Cloud_Functions activation poll]( readme-images/cloud-functions-activation-poll.png) 
+
+We can see that the prossess-message function is activated each time a message arrives in the topic.
+<br>
+We see that the process-message function produces an error as it is expecting another message format than the one that was produced.
+
+<h4>Task 15) Modify the process-message function</h4>
+
+Change to the directory where you have downloaded the template-messagehub-trigger in task 12)
+
+    ```
+    cd template-messagehub-trigger/runtimes/python
+    ```
+
+Open the file actions/process-message.py file with an editor
+
+    ```
+    vi actions/process-message.py 
+    ```   
+    
+Delete replace the existing content by the following one:
+
+    ```
+    def main(dict):
+    messages = dict.get('messages')
+
+    if messages is None or messages[0] is None:
+        return { 'error': "Invalid arguments. Must include 'messages' JSON array with 'value' field" }
+    try:
+        val = messages[0]['value']
+    except KeyError:
+        return { 'error': "Invalid arguments. Must include 'messages' JSON array with 'value' field" }
+
+    for msg in messages:
+        print(msg)
+        
+    return { 'msg': msg}
+    ```   
+Edit file ./activations/ 
 
 
 After the template deploys, you can make further edits to the code to customize it as needed, or go back and check out the catalog of available templates.
