@@ -334,4 +334,4 @@ Poll the activation logs to see whether the incoming message trigger the modifie
 
 We can see that the prossess-message function is activated each time a message arrives in the topic.
 <br>
-We see the modified process-message function running withour error.
+We see the modified process-message function running without error.
