@@ -184,16 +184,24 @@ More information about the [quickstart templates]( https://cloud.ibm.com/docs/op
 
 Clone the template repo.
 
-    ```
-    git clone https://github.com/ibm-functions/template-messagehub-trigger.git
-    ```
+```shell
+git clone https://github.com/ibm-functions/template-messagehub-trigger.git
+```
+
+```shell
+git clone https://github.com/ibm-functions/template-messagehub-trigger.git
+```
 
 Navigate to the directory for the action runtime that you want to use. For example, `python`.
 
-    ```
-    cd template-messagehub-trigger/runtimes/python
-    ```
-    
+```shell
+cd template-messagehub-trigger/runtimes/python
+``` 
+
+```shell
+cd template-messagehub-trigger/runtimes/python
+```
+
 
 Deploy the template by using the following environment variables.
 
