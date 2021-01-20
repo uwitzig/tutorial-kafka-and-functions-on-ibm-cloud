@@ -224,21 +224,31 @@ Example deployment
 ![Cloud_Functions deploy template]( readme-images/cloud-functions-deploy-template.png)   
     
 
-After the template deploys, you can make further edits to the code to customize it as needed, or go back and check out the catalog of available templates.
-
-KAFKA_BROKERS="broker-4-z90rsv38qxg9nxvz.kafka.svc03.eu-de.eventstreams.cloud.ibm.com:9093,broker-0-z90rsv38qxg9nxvz.kafka.svc03.eu-de.eventstreams.cloud.ibm.com:9093,broker-5-z90rsv38qxg9nxvz.kafka.svc03.eu-de.eventstreams.cloud.ibm.com:9093,broker-1-z90rsv38qxg9nxvz.kafka.svc03.eu-de.eventstreams.cloud.ibm.com:9093,broker-3-z90rsv38qxg9nxvz.kafka.svc03.eu-de.eventstreams.cloud.ibm.com:9093,broker-2-z90rsv38qxg9nxvz.kafka.svc03.eu-de.eventstreams.cloud.ibm.com:9093" \
-KAFKA_ADMIN_URL="https://z90rsv38qxg9nxvz.svc03.eu-de.eventstreams.cloud.ibm.com" MESSAGEHUB_USER="token" MESSAGEHUB_PASS="zbVr-C0VnXsMJwehGHhAtzukgOHswv6o39JvUXdL25jv" \
-KAFKA_TOPIC="kafka-python-console-sample-topic" PACKAGE_NAME="kafka-template-package-01" \
-TRIGGER_NAME="aeler-write-trigger-01" RULE_NAME="aeler-write-rule-01" \
-ibmcloud fn deploy -m aeler_manifest.yaml 
-
-List the entities you have created in your namespaces
+List the entities you have deployed in your namespace
 
    ```shell
    ibmcloud fn list
    ```
    
-![Cloud_Functions list]( readme-images/cloud-functions-list.png)  
+![Cloud_Functions list]( readme-images/cloud-functions-list.png)
 
+List the details of the trigger you deployed
+
+   ```shell
+   ibmcloud fn trigger get tutorial-write-trigger-01
+   ```
+   
+List the details of the rule you deployed
+
+   ```shell
+   ibmcloud fn rule get tutorial-write-rule-01
+   ```
+ibmcloud fn rule  get tutorial-write-rule-01
+
+Poll the activation logs
+
+   ```shell
+   ibmcloud fn activation poll
+   ```
 
 After the template deploys, you can make further edits to the code to customize it as needed, or go back and check out the catalog of available templates.
