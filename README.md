@@ -313,41 +313,25 @@ Delete the existing content and replace it by the following one:
     ```
 ![Cloud_Functions activation poll]( readme-images/cloud-functions-redeploy.png)
 
+<h4>Task 16) Produce messages with the standalone sample application in a separate command line window</h4> 
 
-    ```shell
-    git clone https://github.com/ibm-functions/template-messagehub-trigger.git
-    ```
-    
-    
-    ```
-    cd template-messagehub-trigger/runtimes/python
-    ```
+Open an separate command line window and run the standalone sample application to produce messages as outlined in task 8)
 
-Open the file actions/process-message.py file with an editor
+Produce messages
+![Cloud_Functions produce]( readme-images/cloud-functions-produce.png) 
 
-    ```
-    vi actions/process-message.py 
-    ```   
-    
-Delete the existing content and replace it by the following one:
+<h4>Task 17) Poll the IBM functions activation logs</h4> 
 
-    ```
-    def main(dict):
-    messages = dict.get('messages')
+Switch back to the command line window you used in task 12) where you deployed the Event Streams template
 
-    if messages is None or messages[0] is None:
-        return { 'error': "Invalid arguments. Must include 'messages' JSON array with 'value' field" }
-    try:
-        val = messages[0]['value']
-    except KeyError:
-        return { 'error': "Invalid arguments. Must include 'messages' JSON array with 'value' field" }
+Poll the activation logs to see whether the incoming message trigger the modified process-message function
 
-    for msg in messages:
-        print(msg)
-        
-    return { 'msg': msg}
-    ```   
-Edit file ./activations/ 
+   ```shell
+   ibmcloud fn activation poll
+   ```
+   
+![Cloud_Functions activation poll]( readme-images/cloud-functions-activation-poll-modified.png) 
 
-
-After the template deploys, you can make further edits to the code to customize it as needed, or go back and check out the catalog of available templates.
+We can see that the prossess-message function is activated each time a message arrives in the topic.
+<br>
+We see the modified process-message function running withour error.
