@@ -142,7 +142,7 @@ Consumer app example console output on macOS:
 __Note__: The service credentials have been removed after this tutorial. Therefore the api_key in the example above is not anymore valid.
 
 
-## Get and configure IBM Cloud Function to comsume messages
+## Get and configure IBM Cloud Function to consume messages
 
 <h4>Task 10) Go to IBM Cloud Functions and check your current namespace</h4>
 
