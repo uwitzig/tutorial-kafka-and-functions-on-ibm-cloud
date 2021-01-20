@@ -313,24 +313,27 @@ Delete the existing content and replace it by the following one:
  
  Save the file
  
- Deploy the modified template as you did in task 12)
+<h4>Task 16) Deploy the modified process-message function</h4>
+ 
+Deploy the modified template as you did in task 12)
 
-    ```shell
-    KAFKA_BROKERS=<hosts> KAFKA_TOPIC=<topic> KAFKA_ADMIN_URL=<admin_url> \ 
-    MESSAGEHUB_USER=<username> MESSAGEHUB_PASS=<password> \ 
-    PACKAGE_NAME=<name> RULE_NAME=<name> TRIGGER_NAME=<name> \
-    ibmcloud fn deploy -m manifest.yaml
-    ```
+```shell
+KAFKA_BROKERS=<hosts> KAFKA_TOPIC=<topic> KAFKA_ADMIN_URL=<admin_url> \ 
+MESSAGEHUB_USER=<username> MESSAGEHUB_PASS=<password> \ 
+PACKAGE_NAME=<name> RULE_NAME=<name> TRIGGER_NAME=<name> \
+ibmcloud fn deploy -m manifest.yaml
+```
+
 ![Cloud_Functions activation poll]( readme-images/cloud-functions-redeploy.png)
 
-<h4>Task 16) Produce messages with the standalone sample application in a separate command line window</h4> 
+<h4>Task 17) Produce messages with the standalone sample application in a separate command line window</h4> 
 
 Open an separate command line window and run the standalone sample application to produce messages as outlined in task 8)
 
 Produce messages
 ![Cloud_Functions produce]( readme-images/cloud-functions-produce.png) 
 
-<h4>Task 17) Poll the IBM functions activation logs</h4> 
+<h4>Task 18) Poll the IBM functions activation logs</h4> 
 
 Switch back to the command line window you used in task 12) where you deployed the Event Streams template
 
