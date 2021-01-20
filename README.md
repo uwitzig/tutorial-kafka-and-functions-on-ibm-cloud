@@ -16,7 +16,7 @@ In this hands-on tutorial you will create an IBM Event Streams Service on the IB
 
 ## Create and configure Event Streams Service on the IBM Cloud
 
-<h4>1) Create a Event Streams Service</h4>
+<h4>Task 1) Create a Event Streams Service</h4>
 After the login you will see your IBM Cloud Dashboard. In the upper right click on blue area "Create Resource". 
 Type "Event Streams" in the search field of the catalog, then click on Event Streams. 
 On the Event Streams page select the Standard plan, choose a region where you would like to deploy your service as well as a service name. 
@@ -26,13 +26,13 @@ Then click "Create".
 ![Catalog_Event_Streams]( readme-images/catalog-services-event-streams.png)
 
 <br>
-<h4>2) Access your Event Streams Service</h4>
+<h4>Task 2) Access your Event Streams Service</h4>
 Go back to your IBM Cloud Dashboard by clicking the IBM Cloud Logo on the upper left. Under services you will find the Event Streams Service in the corresponding region. Access your service by clicking on its name.
 <br>
 
 ![Manage Event Streams]( readme-images/manage-event-streams.png)
 
-<h4>3) Create a topic for your sample application</h4>
+<h4>Task 3) Create a topic for your sample application</h4>
 
 The next step is to create a topic where your sample application can write to. On the manage page of your Event Streams service click on "Topics", then click on "Create topic +"
 <br>
@@ -46,7 +46,7 @@ On the next pages leave the values to its default and click on "Next" and finall
 
 ![Topic Result]( readme-images/topic-result.png)
 
-<h4>4) Add service credentials</h4>
+<h4>Task 4) Add service credentials</h4>
 
 An application can only access the service via its service credentials. Therefore we need to add service credentials as follows:
 
@@ -70,7 +70,7 @@ An application can only access the service via its service credentials. Therefor
 IBM Event Streams Service is a high-throughput message bus built with Apache Kafka. To get started with Event Streams
 and start sending and receiving messages, you can use the IBM Event Streams sample application.
 
-<h4>5) Get prerequisites</h4>
+<h4>Task 5) Get prerequisites</h4>
 
 Install [git](https://git-scm.com/) if you don't already have it.
 <br>
@@ -79,7 +79,7 @@ Install [Python](https://www.python.org/downloads/) 3.6 or later
 ##### To run the application locally on macOS 
 * Open Keychain Access, export all certificates in System Roots to a single .pem file on your local machine
 
-<h4>6) Clone the Github repository for the sample application</h4>
+<h4>Task 6) Clone the Github repository for the sample application</h4>
 
    The sample application is stored in Github. Clone the `event-streams-samples` repository by running the clone command from the command line. 
 
@@ -94,7 +94,7 @@ Install [Python](https://www.python.org/downloads/) 3.6 or later
    cd event-streams-samples/kafka-python-console-sample/
    ```
 
-<h4>7) Installing dependencies</h4>
+<h4>Task 7) Installing dependencies</h4>
 Run the following command on your local machine to install the dependencies:
 
 ```shell
@@ -154,7 +154,7 @@ __Note__: The current namespace which is displayed after "Current namespace:"
 
 __Note__: You can create a separate namespace for this tutorial by creating a new [cloud foundry org and space]( https://cloud.ibm.com/account/cloud-foundry). Ensure that you create your separate namespace in the same region as you have created the Event Streams Service in task 1) above. 
 
-<h4>11) Install the IBM Cloud Command Line with functions plugin</h4> 
+<h4>Task 11) Install the IBM Cloud Command Line with functions plugin</h4> 
 
 [IBM Cloud Command Line](https://cloud.ibm.com/functions/cli)
 
