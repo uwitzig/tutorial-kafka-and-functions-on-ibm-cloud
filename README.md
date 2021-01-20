@@ -205,12 +205,14 @@ cd template-messagehub-trigger/runtimes/python
 
 Deploy the template by using the following environment variables.
 
-    ```shell
-    KAFKA_BROKERS=<hosts> KAFKA_TOPIC=<topic> KAFKA_ADMIN_URL=<admin_url> \ 
-    MESSAGEHUB_USER=<username> MESSAGEHUB_PASS=<password> \ 
-    PACKAGE_NAME=<name> RULE_NAME=<name> TRIGGER_NAME=<name> \
-    ibmcloud fn deploy -m manifest.yaml
-    ```
+
+```shell
+KAFKA_BROKERS=<hosts> KAFKA_TOPIC=<topic> KAFKA_ADMIN_URL=<admin_url> \ 
+MESSAGEHUB_USER=<username> MESSAGEHUB_PASS=<password> \ 
+PACKAGE_NAME=<name> RULE_NAME=<name> TRIGGER_NAME=<name> \
+ibmcloud fn deploy -m manifest.yaml
+```
+
     
    <table>
     <caption>Understanding the environment variables</caption>
